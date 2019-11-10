@@ -3,22 +3,22 @@ listNum = [1, 2, 3, 4, 5]
 strList = ["Bob", "The", "BUilDer", "yes"]
 
 # Indexing
-print((strList[0] + " "+ strList[2]).title())
+print((strList[0] + " " + strList[2]).title())
 # Print last element in listNum
 print(listNum[-1])
 # Second to last ad third to last
 print(listNum[-2])
 print(strList[-3])
-#Printing
+# Printing
 print(f"I am {listNum[-1]} years old\n")
-
+print("********* Practice problems **********")
 # 3-1. Names: Store the names of a few of your friends in a list called names . Print
 # each person’s name by accessing each element in the list, one at a time.
 # and 3-2. Greetings: Start with the list you used in Exercise 3-1, but instead of just
 # printing each person’s name, print a message to them. The text of each mes-
 # sage should be the same, but each message should be personalized with the
 # person’s name.
-names = ["Me" ,"Myself", "And" ,"I"]
+names = ["Me", "Myself", "And", "I"]
 for temp in names:
     print("Hello " + temp)
 #

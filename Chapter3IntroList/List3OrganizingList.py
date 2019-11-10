@@ -1,74 +1,79 @@
+# Reverse using sort
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+# Alphabetical order
+cars.sort()
+print(cars)
+# Another sort using reverse alphabetical order
+cars.sort(reverse=True)
+print(cars)
 
+# Sorted()- sort temporarily
+print("Here is the original list:")
+print(cars)
+print("\nHere is the sorted list:")
+# Not explained in book:
+# sorted(list) returns a value
+sortedCars = sorted(cars)
+print(sortedCars)
+print("\nHere is the original list again:")
+print(cars)
+print()
+
+# Printing list in reverse order
+print(cars)
+cars.reverse()  # Reverses the actual array itself and updates itself
+print(cars)
+
+# Getting length of list
+l = len(cars)
+print(l)
 
 print("********* Practice problems **********")
-# 3-4. Guest List: If you could invite anyone, living or deceased, to dinner, who
-# would you invite? Make a list that includes at least three people you’d like to
-# invite to dinner. Then use your list to print a message to each person, inviting
-# them to dinner
-print("********* 3-4 **********")
+# 3-8. Seeing the World: Think of at least five places in the world you’d like to
+# visit.
+# • Store the locations in a list. Make sure the list is not in alphabetical order.
+# • Print your list in its original order. Don’t worry about printing the list neatly,
+# just print it as a raw Python list.
+# • Use sorted() to print your list in alphabetical order without modifying the
+# actual list.
+# • Show that your list is still in its original order by printing it.
+# • Use sorted() to print your list in reverse alphabetical order without chang-
+# ing the order of the original list.
+# • Show that your list is still in its original order by printing it again.
+# • Use reverse() to change the order of your list. Print the list to show that its
+# order has changed.
+# • Use reverse() to change the order of your list again. Print the list to show
+# it’s back to its original order.
+# • Use sort() to change your list so it’s stored in alphabetical order. Print the
+# list to show that its order has been changed.
+# • Use sort() to change your list so it’s stored in reverse alphabetical order.
+# Print the list to show that its order has changed.
+print("********* 3-8 **********")
+locations = ["Colony 9", "Tephra Cave", "Bionis' Leg", "Colony 6", "Ether Mine", "Satorl Marsh"]
+print(locations)
+print(sorted(locations))
+print(locations)
+sortedLoc = sorted(locations)
+sortedLoc.sort(reverse=True)
+print(sortedLoc)
+print(locations)
+locations.reverse()
+print(locations)
+locations.reverse()
+print(locations)
+locations.sort()
+print(locations)
+locations.sort(reverse=True)
+print(locations)
+# 3-9. Dinner Guests: Working with one of the programs from Exercises 3-4
+# through 3-7 (page 42), use len() to print a message indicating the number
+# of people you are inviting to dinner.
+print("********* 3-9 **********")
 guestList = ["Terry", "Plant", "Joker", "Hero", "Banjo", "Kazooie"]
-length = guestList.__len__()
 
-for x in range(0, length):
-    print(guestList[x] + " is invited to smash!")
-print('Plant can\'t make it')
-
-# 3-5. Changing Guest List: You just heard that one of your guests can’t make the
-# dinner, so you need to send out a new set of invitations. You’ll have to think of
-# someone else to invite.
-# • Start with your program from Exercise 3-4. Add a print() call at the end
-# of your program stating the name of the guest who can’t make it.
-# • Modify your list, replacing the name of the guest who can’t make it with
-# the name of the new person you are inviting.
-# • Print a second set of invitation messages, one for each person who is still
-# in your list.
-print("********* 3-5 **********")
-guestList.remove("Plant")
-guestList.insert(0, "Mario")
-length = guestList.__len__()
-
-for x in range(0, length):
-    print(guestList[x] + " is invited to smash!")
-
-# 3-6. More Guests: You just found a bigger dinner table, so now more space is
-# available. Think of three more guests to invite to dinner.
-# • Start with your program from Exercise 3-4 or Exercise 3-5. Add a print()
-# call to the end of your program informing people that you found a bigger
-# dinner table.
-# • Use insert() to add one new guest to the beginning of your list.
-# • Use insert() to add one new guest to the middle of your list.
-# • Use append() to add one new guest to the end of your list.
-# • Print a new set of invitation messages, one for each person in your list.
-print("********* 3-6 **********")
-print('We have a bigger dinner table!')
-
-guestList.insert(0, "Zelda")
-guestList.insert(int((guestList.__len__())/2), "Donkey Kong")
-guestList.append("Shulk")
-
-length = guestList.__len__()
-for x in range(0, length):
-    print(guestList[x] + " is invited to smash!")
-
-# 3-7. Shrinking Guest List: You just found out that your new dinner table won’t
-# arrive in time for the dinner, and you have space for only two guests.
-# • Start with your program from Exercise 3-6. Add a new line that prints a
-# message saying that you can invite only two people for dinner.
-# • Use pop() to remove guests from your list one at a time until only two
-# names remain in your list. Each time you pop a name from your list, print
-# a message to that person letting them know you’re sorry you can’t invite
-# them to dinner.
-# • Print a message to each of the two people still on your list, letting them
-# know they’re still invited.
-# • Use del to remove the last two names from your list, so you have an empty
-# list. Print your list to make sure you actually have an empty list at the end
-# of your program.
-print("********* 3-7 **********")
-print('We can only have 2 people')\
-
-while guestList.__len__() > 2:
-    print(f"Sorry {guestList.pop()}, there wasn't enough space!")
-for x in range(0, guestList.__len__()):
-    print(guestList[x] + " is still invited to smash!")
-del guestList
-print(guestList)
+print(f"{len(guestList)} is the number of people invited to smash")
+# 3-10. Every Function: Think of something you could store in a list. For example,
+# you could make a list of mountains, rivers, countries, cities, languages, or any-
+# thing else you’d like. Write a program that creates a list containing these items
+# and then uses each function introduced in this chapter at least once.
+print("********* 3-10 **********")
